@@ -17,8 +17,10 @@ $('#gridSizeButton').on('click', function (event) {
   makeGrid(height, width);
 });
 
+// Color grid squares
 $('#pixelCanvas').on('click', 'td', function (event) {
   console.log('Clicked Square!');
+  $(this).css('background-color', $('#colorPicker').val());
 });
 
 // When size is submitted by the user, call makeGrid()
@@ -33,4 +35,5 @@ function makeGrid(height, width) {
 
 function clearGrid() {
   $('#pixelCanvas').empty();
+  $('#colorPicker').val();
 }
