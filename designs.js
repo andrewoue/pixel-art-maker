@@ -1,6 +1,13 @@
-/*jshint esversion: 6 */
+/* jshint esversion: 6 */
 
-// Grid size button
+/*
+Pixel Art Maker! 2.0
+Andrew Ouellette
+Adapted from Andrew Ouellette - Grow wih Google Project SP18
+Submitted for Udacity Programing Nano Degree SP19
+*/
+
+// Sets up grid size
 $('#gridSizeButton').on('click', function (event) {
   event.preventDefault();
   clearGrid();
@@ -11,11 +18,10 @@ $('#gridSizeButton').on('click', function (event) {
 
 // Color grid squares
 $('#pixelCanvas').on('click', 'td', function (event) {
-  console.log('Clicked Square!');
   $(this).css('background-color', $('#colorPicker').val());
 });
 
-// When size is submitted by the user, call makeGrid()
+// Makes grid
 function makeGrid(height, width) {
   for (let h = 1; h <= height; h++) {
     $('#pixelCanvas').append('<tr>');
@@ -25,7 +31,7 @@ function makeGrid(height, width) {
   }
 }
 
-// Clears grid and resets color to black
+// Clears grid and resets square color to black
 function clearGrid() {
   $('#pixelCanvas').empty();
   $('#colorPicker').val('#000000');
