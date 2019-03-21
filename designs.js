@@ -17,6 +17,10 @@ $('#gridSizeButton').on('click', function (event) {
   makeGrid(height, width);
 });
 
+$('#pixelCanvas').on('click', 'td', function (event) {
+  console.log('Clicked Square!');
+});
+
 // When size is submitted by the user, call makeGrid()
 function makeGrid(height, width) {
   for (let h = 1; h <= height; h++) {
