@@ -34,6 +34,7 @@ tr {
 
 td {
     width: 20px;
+    background-color: #fff;
 }
 
 input[type=number] {
