@@ -1,13 +1,5 @@
 /*jshint esversion: 6 */
 
-// Select color input
-console.log('Check');
-console.log($('#colorPicker').val());
-
-// Constants
-//const inputHeight = $('#inputHeight').val();
-//const inputWidth = $('#inputWidth').val();
-
 // Grid size button
 $('#gridSizeButton').on('click', function (event) {
   event.preventDefault();
@@ -33,7 +25,8 @@ function makeGrid(height, width) {
   }
 }
 
+// Clears grid and resets color to black
 function clearGrid() {
   $('#pixelCanvas').empty();
-  $('#colorPicker').val();
+  $('#colorPicker').val('#000000');
 }
